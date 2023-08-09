@@ -31,16 +31,16 @@
 
 <body>
     <!-- Preloader -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <img src="{{ asset('logo.png') }}" alt="loader" class="lds-ripple img-fluid animate-bounce" />
-    </div>
+    </div> -->
     <!-- Preloader -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <img src="{{ asset('logo.png') }}" alt="loader" class="lds-ripple img-fluid animate-bounce" />
-    </div>
+    </div> -->
     <!--  Body Wrapper -->
-    <div class="page-wrapper" id="main-wrapper" data-theme="blue_theme" data-layout="vertical" data-sidebartype="full"
-        data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- <div class="page-wrapper" id="main-wrapper" data-theme="blue_theme" data-layout="vertical" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed"> -->
        
         <div class="body-wrapper">
             <!--  Header Start -->
