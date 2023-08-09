@@ -53,6 +53,8 @@
                       <div class="d-grid py-4 px-7 pt-8">
                         <button class="btn btn-outline-primary"
                             id="logoutBtn">Log Out</button>
+                            <button class="btn btn-outline-primary"
+                            id="logoutBtn"><a href="profile">Profile</a></button>
                     </div>
                 </div>
               </div>
