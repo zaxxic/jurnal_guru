@@ -5,10 +5,10 @@
     </ul>
     <ul class="navbar-nav quick-links d-none d-lg-flex">
       <li class="nav-item dropdown-hover d-none d-lg-block">
-        <a class="nav-link" href="app-chat.html">Dashboard</a>
+        <a class="nav-link" href="dashboard">Dashboard</a>
       </li>
       <li class="nav-item dropdown-hover d-none d-lg-block">
-        <a class="nav-link" href="app-calendar.html">Profile</a>
+        <a class="nav-link" href="profile">Profile</a>
       </li>
     </ul>
     <div class="d-block d-lg-none">
