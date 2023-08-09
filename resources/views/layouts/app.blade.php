@@ -41,10 +41,7 @@
     <!--  Body Wrapper -->
     <div class="page-wrapper" id="main-wrapper" data-theme="blue_theme" data-layout="vertical" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
-        <!-- Sidebar Start -->
-        @include('layouts.sidebar')
-        <!--  Sidebar End -->
-        <!--  Main wrapper -->
+       
         <div class="body-wrapper">
             <!--  Header Start -->
             @include('layouts.header')
@@ -90,50 +87,6 @@
     <script src="{{ asset('assets/dist/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/plugins/repeater-init.js') }}"></script>
     <script>
-        const authToken = localStorage.getItem('token')
-        $.ajaxSetup({
-            headers: {
-                'Accept': 'application/json',
-                'Authorization': 'Bearer ' + authToken,
-            }
-        });
-        getUser()
-
-        function getUser() {
-            $.ajax({
-                url: "{{ config('app.api_url') }}/user",
-                type: 'GET',
-
-                dataType: "JSON",
-                success: function(response) {
-                    $('.username').html(response.data.name)
-                    $('.role').html(response.data.role)
-                    $('.email').html(response.data.email)
-                    $('.user-profile').attr('src', response.data.photo)
-                    $('.preloader').fadeOut();
-                },
-                error: function(err) {
-                    console.log(err)
-                    window.location.href = "{{ route('login') }}"
-                }
-            })
-        }
-
-        $('#logoutBtn').on('click', function() {
-            $.ajax({
-                url: "{{ config('app.api_url') }}/logout",
-                type: "POST",
-                dataType: "JSON",
-                success: function(response) {
-                    localStorage.removeItem('token');
-                    window.location.href =
-                        "/login";
-                },
-                error: function(response) {
-                    console.log(response);
-                }
-            });
-        });
 
         function handleValidate(messages, type) {
             const keys = Object.keys(messages);
