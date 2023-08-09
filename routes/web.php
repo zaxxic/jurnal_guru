@@ -21,18 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::resource('dashboard', DashboardController::class)->only('index',);
-// Route::resource('packages', PackageController::class)->only('index',);
-// Route::resource('card', RegisterCardController::class)->only('index',);
-// Route::resource('card/master', MasterCardController::class)->only('index',);
-// Route::resource('schools/verification', SchoolVerificationController::class)->only('index', 'show');
-// Route::resource('schools/list', SchoolListController::class)->only('index');
-// Route::resource('school/year', SchoolYearController::class)->only('index');
-// Route::resource('transaction/history', HistoryTransaction::class)->only('index');
 
-// Route::get('transaction/print', [HistoryTransaction::class, 'search'])->name('print.history');
-
-// Route::get('dashboard', [dashboardController::class])->name('index');
 Route::get('dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
