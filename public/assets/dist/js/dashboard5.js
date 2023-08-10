@@ -148,9 +148,9 @@ $(function () {
       type: "radialBar",
       fontFamily: '"DM Sans",sans-serif',
       foreColor: "#adb0bb",
-      height: 305,
+      height: 250,
     },    
-    series: [45, 50, 60, 70],
+    series: [50, 60, 70],
     colors: ['#615dff', '#fa896b', '#ffae1f', '#3dd9eb'],
     plotOptions: {
       radialBar: {
@@ -161,7 +161,7 @@ $(function () {
         dataLabels: {
           total: {
             show: true,
-            label: 'Team'
+            label: 'Detail'
           }
         }
       }
@@ -178,7 +178,7 @@ $(function () {
     stroke: {
       lineCap: "round",
     },
-    labels: ['Team A', 'Team B', 'Team C', 'Team D'],
+    labels: ['Alpha', 'Izin', 'Sakit'],
     tooltip: {
       enabled: true,
       theme: "dark",

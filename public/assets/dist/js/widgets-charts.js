@@ -420,7 +420,7 @@ $(function () {
   var options = {
     color: "#adb5bd",
     series: [55, 55, 55],
-    labels: ["Income", "Current", "Expance"],
+    labels: ["Izin", "Sakit", "Alpha"],
     chart: {
       type: "donut",
       fontFamily: "Plus Jakarta Sans', sans-serif",
@@ -445,7 +445,7 @@ $(function () {
               color: '#5A6A85',
               fontSize: '20px',
               fontWeight: "600",
-              label: '$98,260',
+              label: '',
             },
           },
         },
@@ -461,7 +461,7 @@ $(function () {
     legend: {
       show: false,
     },
-    colors: ["var(--bs-primary)", "#EAEFF4", "var(--bs-secondary)"],
+    colors: ["var(--bs-primary)", "var(--bs-warning)", "var(--bs-danger)"],
 
     tooltip: {
       theme: "dark",
@@ -593,12 +593,12 @@ $(function () {
   var options = {
     series: [
       {
-        name: "San Francisco",
-        data: [44, 55, 41, 67, 22, 43],
+        name: "Sakit",
+        data: [44, 44, 44],
       },
       {
-        name: "Diego",
-        data: [13, 23, 20, 8, 13, 27],
+        name: "Alpha",
+        data: [13, 13, 13],
       },
     ],
     chart: {

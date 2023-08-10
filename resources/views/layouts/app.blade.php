@@ -86,6 +86,10 @@
     <script src="{{ asset('assets/dist/js/forms/select2.init.js') }}"></script>
     <script src="{{ asset('assets/dist/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/plugins/repeater-init.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/apps/chat.js') }}"></script>
+    <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+    <script src=" {{ asset('assets/dist/js/widgets-charts.js') }}"></script>
+    <script src=" {{ asset('assets/dist/js/dashboard5.js') }}"></script>
     <script>
         const authToken = localStorage.getItem('token')
         $.ajaxSetup({
