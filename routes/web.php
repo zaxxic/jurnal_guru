@@ -1,13 +1,6 @@
 <?php
 
-use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\HistoryTransaction;
-use App\Http\Controllers\MasterCardController;
-use App\Http\Controllers\PackageController;
-use App\Http\Controllers\RegisterCardController;
-use App\Http\Controllers\SchoolListController;
-use App\Http\Controllers\SchoolVerificationController;
-use App\Http\Controllers\SchoolYearController;
+use App\Http\Controllers\Dashboard1Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,14 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::resource('dashboard', Dashboard1Controller::class)->only('index',);
+
 
 Route::get('profile', function () {
     return view('profile');
 })->name('profile');
 
-Route::get('login', function () {
+Route::get('/login', function () {
     return view('Auth.login');
 })->name('login');

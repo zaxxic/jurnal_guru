@@ -45,12 +45,12 @@
                                         <h5 class="card-title fw-semibold">Ganti Profil</h5>
                                         <p class="card-subtitle mb-4">Ganti foto profil di sini</p>
                                         <div class="text-center">
-                                            <img src="../../dist/images/profile/user-1.jpg" alt=""
+                                            <img src="{{ asset('assets/dist/images/profile/user-1.jpg') }}" alt=""
                                                 class="img-fluid rounded-circle" width="120" height="120">
                                             <div class="d-flex align-items-center justify-content-center my-4 gap-3">
                                                 <input class="form-control" type="file" id="formFile">
                                             </div>
-                                            <p class="mb-0">Dibolehkan JPG, GIF or PNG. Ukuran maksimal of 800K</p>
+                                            <p class="mb-0">Inputkan JPG, GIF or PNG. Ukuran maksimal of 800K</p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,17 +63,17 @@
                                         <form>
                                             <div class="mb-4">
                                                 <label for="exampleInputPassword1" class="form-label fw-semibold">Password Sebelumnya</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********"
                                                     >
                                             </div>
                                             <div class="mb-4">
                                                 <label for="exampleInputPassword1" class="form-label fw-semibold">Password Baru </label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********"
                                                     >
                                             </div>
                                             <div class="">
                                                 <label for="exampleInputPassword1" class="form-label fw-semibold">Konfirmasi Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                                <input type="password" class="form-control" id="exampleInputPassword1"placeholder="********"
                                                     >
                                             </div>
                                         </form>
@@ -92,14 +92,14 @@
                                                     <div class="mb-4">
                                                         <label for="exampleInputPassword1"
                                                             class="form-label fw-semibold">Nama</label>
-                                                        <input type="text" class="form-control" id="exampleInputtext"
+                                                        <input type="text" class="form-control" id="exampleInputtext" placeholder="Mohammad reno dzuhri pratama"
                                                             >
                                                     </div>
                                                     
                                                     <div class="mb-4">
                                                         <label for="exampleInputPassword1"
                                                             class="form-label fw-semibold">Email</label>
-                                                        <input type="email" class="form-control" id="exampleInputtext"
+                                                        <input type="email" class="form-control" id="exampleInputtext" 
                                                             >
                                                     </div>
                                                 </div>

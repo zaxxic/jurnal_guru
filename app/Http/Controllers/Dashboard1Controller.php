@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SchoolVerificationController extends Controller
+class Dashboard1Controller extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        return view('school_verifacation');
-
+        return view('dashboard');
     }
+
 
     /**
      * Show the form for creating a new resource.
