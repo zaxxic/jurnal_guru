@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/dist/libs/select2/dist/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dist/libs/sweetalert2/dist/sweetalert2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dist/css/app.css') }}">
+
     @yield('style')
 </head>
 
@@ -86,10 +87,6 @@
     <script src="{{ asset('assets/dist/js/forms/select2.init.js') }}"></script>
     <script src="{{ asset('assets/dist/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/plugins/repeater-init.js') }}"></script>
-    <script src="{{ asset('assets/dist/js/apps/chat.js') }}"></script>
-    <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src=" {{ asset('assets/dist/js/widgets-charts.js') }}"></script>
-    <script src=" {{ asset('assets/dist/js/dashboard5.js') }}"></script>
     <script>
         const authToken = localStorage.getItem('token')
         $.ajaxSetup({
@@ -119,7 +116,6 @@
                 }
             })
         }
-
 
         $('#logoutBtn').on('click', function() {
             $.ajax({
@@ -154,31 +150,7 @@
             })
         }
 
-        function handlePaginate(pagination) {
-            const paginate = $('<ul>').addClass('pagination')
-            for (var page = 1; page <= pagination.last_page; page++) {
-                const pageItem = $('<li>').addClass('page-item')
-                page == pagination.current_page ? pageItem.addClass('active') : '';
-                const pageLink = `<button class="page-link" onclick="get(${page})">${page}</button>`
-                pageItem.append(pageLink)
-                paginate.append(pageItem)
-            }
-            const previous = `<li class="page-item ${pagination.current_page == 1 ? 'disabled' : ''}" ${pagination.current_page != 1 ? 'onclick="get('+(pagination.current_page - 1)+')"' : ''}>
-                          <button
-                            class="page-link"
-                            tabindex="-1"
-                            aria-disabled="true"
-                            >Previous</button
-                          >
-                        </li>`
-            const next = `<li class="page-item ${pagination.current_page == pagination.last_page ? 'disabled' : ''}" ${pagination.current_page != pagination.last_page ? 'onclick="get('+(pagination.current_page + 1)+')"' : ''}>
-                                <button class="page-link" href="#">Next</button>
-                        </li>`
-            paginate.prepend(previous)
-            paginate.append(next)
 
-            return paginate
-        }
 
         function emptyForm(formId) {
             const form = $('#' + formId)
@@ -289,31 +261,7 @@
             </div>`;
         }
 
-        function handlePaginate(pagination) {
-            const paginate = $('<ul>').addClass('pagination')
-            for (var page = 1; page <= pagination.last_page; page++) {
-                const pageItem = $('<li>').addClass('page-item')
-                page == pagination.current_page ? pageItem.addClass('active') : '';
-                const pageLink = `<button class="page-link" onclick="get(${page})">${page}</button>`
-                pageItem.append(pageLink)
-                paginate.append(pageItem)
-            }
-            const previous = `<li class="page-item ${pagination.current_page == 1 ? 'disabled' : ''}" ${pagination.current_page != 1 ? 'onclick="get('+(pagination.current_page - 1)+')"' : ''}>
-                          <button
-                            class="page-link"
-                            tabindex="-1"
-                            aria-disabled="true"
-                            >Previous</button
-                          >
-                        </li>`
-            const next = `<li class="page-item ${pagination.current_page == pagination.last_page ? 'disabled' : ''}" ${pagination.current_page != pagination.last_page ? 'onclick="get('+(pagination.current_page + 1)+')"' : ''}>
-                                <button class="page-link" href="#">Next</button>
-                        </li>`
-            paginate.prepend(previous)
-            paginate.append(next)
-
-            return paginate
-        }
+        
     </script>
 
 
