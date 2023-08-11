@@ -1,14 +1,14 @@
 $(function () {
   // Simple Pie Chart -------> PIE CHART
   var options_simple = {
-    series: [44, 55, 13, 43, 22],
+    series: [44, 55, 13],
     chart: {
       fontFamily: '"Nunito Sans", sans-serif',
       width: 380,
       type: "pie",
     },
-    colors: ["var(--bs-primary)", "var(--bs-secondary)", "#ffae1f", "#fa896b", "#39b69a"],
-    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    colors: ["var(--bs-primary)", "#ffae1f", "#fa896b"],
+    labels: ["Izin", "Sakit", "Alpha"],
     responsive: [{
       breakpoint: 480,
       options: {

@@ -87,6 +87,12 @@
     <script src="{{ asset('assets/dist/js/forms/select2.init.js') }}"></script>
     <script src="{{ asset('assets/dist/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/plugins/repeater-init.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/apps/chat.js') }}"></script>
+    <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/widgets-charts.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/dashboard5.js') }}"></script>
+    <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/apex-chart/apex.pie.init.js') }}"></script>
     <script>
         const authToken = localStorage.getItem('token')
         $.ajaxSetup({
@@ -101,7 +107,6 @@
             $.ajax({
                 url: "{{ config('app.api_url') }}/user",
                 type: 'GET',
-
                 dataType: "JSON",
                 success: function(response) {
                     $('.username').html(response.data.name)
@@ -111,8 +116,6 @@
                     $('.preloader').fadeOut();
                 },
                 error: function(err) {
-                    console.log(err)
-                    window.location.href = "{{ route('login') }}"
                 }
             })
         }
