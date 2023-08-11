@@ -23,31 +23,23 @@
             </div>
         </div>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="card w-100">
-                <div class="card-body" style="height: 500px; overflow-y: auto;">
-                    <h5 class="card-title fw-semibold mb-4">Jadwal Mengajar</h5>
-                    <ul class="timeline-widget mb-0 position-relative mb-n5">
-                        <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">Jam ke 1-2</div>
-                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                                <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
-                                <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                            </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1">X-RPL / Bahasa Indonesia <div> <button class="btn mb-1 waves-effect waves-light btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#bs-example-modal-md">
-                                        Isi Jurnal
-                                    </button> </div>
-                            </div>
-                        </li>
-                        <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">Jam ke 3-4</div>
-                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                                <span class="timeline-badge border-2 border border-dark flex-shrink-0 my-8"></span>
-                                <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                            </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1">X-RPL / Bahasa Inggris <div>
-                                    <p class="badge text-bg-success fs-2 rounded-4 py-1 px-2">Sudah Diisi</p>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="card w-100">
+                    <div class="card-body" style="height: 650px; overflow-y: auto;">
+                        <h5 class="card-title fw-semibold mb-4">Jadwal Mengajar</h5>
+                        <ul id="data" class="timeline-widget mb-0 position-relative mb-n5">
+                            {{-- <li class="timeline-item d-flex position-relative overflow-hidden">
+                                <div class="timeline-time text-dark flex-shrink-0 text-end">Jam ke 1-2</div>
+                                <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                                    <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
+                                    <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                                </div>
+                                <div class="timeline-desc fs-3 text-dark mt-n1">X-RPL / Bahasa Indonesia <div> <button
+                                            class="btn mb-1 waves-effect waves-light btn-sm btn-outline-info"
+                                            data-bs-toggle="modal" data-bs-target="#bs-example-modal-md">
+                                            Isi Jurnal
+                                        </button> </div>
                                 </div>
                             </li>
                             <li class="timeline-item d-flex position-relative overflow-hidden">
@@ -60,28 +52,51 @@
                                         <p class="badge text-bg-success fs-2 rounded-4 py-1 px-2">Sudah Diisi</p>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </div>
                 </div>
             </div>
-        <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card w-100 position-relative overflow-hidden mb-7 mb-lg-0">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title fw-semibold mb-4">Data Kehadiran Siswa</h5>
 
-                        <button class="btn mb-5 waves-effect waves-light btn btn-primary " data-bs-toggle="modal" data-bs-target="#samedata-modal">
-                            Lihat Detail
-                        </button>
+            <div class="col-md-7 d-flex align-items-stretch">
+                <div class="card w-100 position-relative overflow-hidden mb-7 mb-lg-0">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Daftar kehadiran siswa</h5>
+                        <div id="current-year"></div>
+                        <div class="text-center">
+                            <button class="btn mb-1 mt-4 waves-effect waves-light btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#samedata-modal">
+                                Lihat Detail
+                            </button>
+                        </div>
                     </div>
-                    <div id="chart-pie-simple"></div>
+                    <div class="p-3">
+                        <div class="hstack gap-3 justify-content-center">
+                            <div>
+                                <span>
+                                    <span class="round-8 bg-danger rounded-circle d-inline-block me-2"></span>
+                                </span>
+                                <span class="fs-3 text-dark">Alpha</span>
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="round-8 bg-primary rounded-circle d-inline-block me-2"></span>
+                                </span>
+                                <span class="fs-3 text-dark">Izin</span>
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="round-8 bg-warning rounded-circle d-inline-block me-2"></span>
+                                </span>
+                                <span class="fs-3 text-dark">Sakit</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
-    </div>
     <!-- /.modal -->
 @endsection
 @section('script')
