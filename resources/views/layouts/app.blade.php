@@ -109,14 +109,15 @@
                 type: 'GET',
                 dataType: "JSON",
                 success: function(response) {
+
                     $('.username').html(response.data.name)
                     $('.role').html(response.data.role)
                     $('.email').html(response.data.email)
                     $('.user-profile').attr('src', response.data.photo)
                     $('.preloader').fadeOut();
+
                 },
-                error: function(err) {
-                }
+                error: function(err) {}
             })
         }
 
@@ -261,10 +262,8 @@
                     <img src="{{ asset('no-data.svg') }}" width="400" height="400"/>
                     <h4 style="margin-left:30px;">${message}</h4>
                 </div>
-            </div>`;
+                </div>`;
         }
-
-        
     </script>
 
 

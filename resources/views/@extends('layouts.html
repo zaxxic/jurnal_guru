@@ -114,40 +114,50 @@
                 <div class="col-12">
                     <div class="card w-100 position-relative overflow-hidden mb-0">
                         <div class="card-body p-4">
-                            <form id="form-create">
-                                <input type="hidden" id="user-id" name="user_id">
+                            <form>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="mb-4">
                                             <div class="mb-4">
                                                 <label class="form-label fw-semibold">Siswa Alpha <span
                                                         class="text-danger">*</span></label>
-                                                <select name="alpha[]" class="select2 form-control" multiple="multiple"
+                                                <select class="select2 form-control" multiple="multiple"
                                                     style="height: 36px; width: 100%" id="select-siswa-alpha">
                                                 </select>
                                                 <small class="form-text text-muted">Pilih Siswa yang Alpha.</small>
                                             </div>
-
+                                            <small id="name" class="form-text text-muted">Pilih Siswa yang
+                                                Alpha.</small>
                                         </div>
                                         <div class="mb-4">
-                                            <label class="form-label fw-semibold">Siswa Izin <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="select2 form-control select-siswa" name="permission[]"
-                                                multiple="multiple" style="height: 36px; width: 100%"
-                                                id="select-siswa-izin">
+                                            <label for="exampleInputPassword1" class="form-label fw-semibold">Siswa Izin
+                                                <span class="text-danger">*</span></label>
+                                            <select class="select2 form-control" multiple="multiple"
+                                                style="height: 36px; width: 100%">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
                                             </select>
-                                            <small class="form-text text-muted">Pilih Siswa yang Izin.</small>
+                                            <small id="name" class="form-text text-muted">Pilih Siswa yang Sedang
+                                                Izin.</small>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-4">
-                                            <label class="form-label fw-semibold">Siswa Sakit <span
-                                                    class="text-danger">*</span></label>
-                                            <select name="sick[]" class="select2 form-control select-siswa"
-                                                multiple="multiple" style="height: 36px; width: 100%"
-                                                id="select-siswa-sakit">
+                                            <label for="exampleInputPassword1" class="form-label fw-semibold">Siswa Sakit
+                                                <span class="text-danger">*</span></label>
+                                            <select class="select2 form-control" multiple="multiple"
+                                                style="height: 36px; width: 100%">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
                                             </select>
-                                            <small class="form-text text-muted">Pilih Siswa yang sakit.</small>
+                                            <small id="name" class="form-text text-muted">Pilih Siswa yang Sedang
+                                                Sakit.</small>
                                         </div>
                                     </div>
                                 </div>
@@ -155,19 +165,19 @@
                                     <div class="">
                                         <label for="exampleInputPassword1" class="form-label fw-semibold">Deskripsi <span
                                                 class="text-danger">*</span></label>
-                                        <textarea name="description" type="text" class="form-control" id="exampleInputtext"></textarea>
-                                        <button type="submit" class="btn btn-primary">Save</button>
-                                        <div class="col-12">
-                                            <div class="d-flex align-items-center justify-content-end mt-4 gap-3">
-                                                <button class="btn btn-light-danger text-danger">Cancel</button>
-                                            </div>
-                                        </div>
+                                        <textarea type="text" class="form-control" id="exampleInputtext"></textarea>
                                         <small id="name" class="form-text text-muted">Isi Deskripsi Dengan Kegiatan
                                             dan Aktivitas yang Berlaku Pada Jam Pelajaran Tersebut.</small>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center justify-content-end mt-4 gap-3">
+                                        <button class="btn btn-primary">Save</button>
+                                        <button class="btn btn-light-danger text-danger">Cancel</button>
+                                    </div>
+                                </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -190,7 +200,7 @@
                             <div class="d-flex">
                                 <div class="p-8 bg-light-primary rounded-2 d-flex align-items-center justify-content-center me-6"
                                     style="width: 40px; height: 40px;">
-                                    <span class="fs-5 text-primary"></span>
+                                    <span class="fs-5 text-primary">R</span>
                                 </div>
                                 <div>
                                     <h6 class="mb-1 fs-4 fw-semibold">Raja Mahendra</h6>
@@ -308,7 +318,7 @@
                                 <div class="timeline-desc fs-3 text-dark mt-n1">${item.classroom.name} / ${item.lesson.name} <div>
                                      <button
                                             class=" btn mb-1 waves-effect waves-light btn-sm btn-outline-info btn-create"
-                                            id="btn-create-${item.classroom.id}" data-id="${item.classroom.id}" data-user-id="${item.id}">
+                                            id="btn-create-${item.classroom.id}" data-id="${item.classroom.id}">
                                             Isi Jurnal 
                                         </button> </div>
 
@@ -323,11 +333,6 @@
 
                         $('.btn-create').click(function() {
                             var id = $(this).data('id');
-                            var userId = $(this).data('user-id');
-                            $('#form-create').data('id', id); // Simpan id ke dalam form data
-                            $('#user-id').val(userId); // Isi nilai userId ke input tersembunyi
-                            console.log(id);
-                            console.log(userId);
                             $('#form-create').data('id', id);
 
                             $.ajax({
@@ -335,39 +340,31 @@
                                 type: 'GET',
                                 dataType: 'JSON',
                                 success: function(response) {
-                                    var detailData = response.data;
-                                    console.log(detailData);
+                                    var studentData = response.data.student;
+                                    console.log(studentData);
 
-                                    // Fungsi untuk mengisi elemen select dengan opsi siswa
-                                    function populateSelect(selectId, siswaData) {
-                                        var select = $('#' + selectId);
-                                        select.empty();
-                                        $.each(siswaData, function(index, item) {
-                                            var option = '<option value="' + item
-                                                .student.id + '">' + item.student
-                                                .name +
-                                                '</option>';
-                                            select.append(option);
+                                    if (studentData && studentData.length > 0) {
+                                        var selectSiswaAlpha = $('#select-siswa-alpha');
+                                        selectSiswaAlpha.empty();   
+
+                                        $.each(studentData, function(index, student) {
+                                            var option = $('<option>', {
+                                                value: student.id,
+                                                text: student.name
+                                            });
+
+                                            selectSiswaAlpha.append(option);
                                         });
+
+                                        $('#modal-create').modal('show');
+                                    } else {
+                                        console.log("No student data available.");
                                     }
-
-                                    // Akses data siswa dari relasi studentClassrooms
-                                    var siswaData = detailData;
-                                    console.log(siswaData);
-
-                                    // Mengisi elemen select untuk kategori siswa
-                                    populateSelect('select-siswa-alpha', siswaData);
-                                    populateSelect('select-siswa-izin', siswaData);
-                                    populateSelect('select-siswa-sakit', siswaData);
-
-                                    // Tampilkan modal "create"
-                                    $('#modal-create').modal('show');
                                 },
                                 error: function(error) {
                                     console.error("Error fetching student data:", error);
                                 }
                             });
-
                         });
 
 
@@ -381,43 +378,5 @@
                 }
             })
         }
-
-        $('#form-create').submit(function(e) {
-            e.preventDefault()
-            var id = $(this).data('id'); // Ambil nilai id dari form data
-            var userId = $('#user-id').val();
-            const token = localStorage.getItem('token')
-            e.preventDefault();
-            $.ajax({
-                url: "{{ config('app.api_url') }}/teacher-journal/" + userId,
-                type: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-                dataType: "JSON",
-                data: $(this).serialize(),
-                success: function(response) {
-                    console.log(response)
-                    get()
-                    $('.btn-close').click()
-                    Swal.fire({
-                        'title': 'Berhasil!',
-                        'icon': 'success',
-                        'text': response.message
-                    })
-                    emptyForm('form-create')
-                },
-                error: function(response) {
-                    console.log(response)
-
-                    var response = response.responseJSON
-                    var status = response.meta.code
-                    if (status == 422) {
-                        handleValidate(response.data, 'create')
-                    }
-                }
-            })
-        })
     </script>
 @endsection
